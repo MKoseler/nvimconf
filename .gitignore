@@ -1,0 +1,11 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+lua/plugins/mason.lua
+lua/plugins/sonarlint.lua
+lua/config/options.lua

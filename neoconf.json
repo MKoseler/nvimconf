@@ -1,0 +1,18 @@
+{
+  "lspconfig": {
+    "jdtls": {
+      "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-21",
+          "path": "/usr/lib/jvm/java-21-openjdk-amd64",
+          "default": true
+        },
+        {
+          "name": "JavaSE-21-alternative",
+          "path": "/usr/lib/jvm/java-1.21.0-openjdk-amd64",
+          "default": false
+        }
+      ]
+    }
+  }
+}
