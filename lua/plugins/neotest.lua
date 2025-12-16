@@ -1,23 +1,24 @@
 return {
     {
         "atm1020/neotest-jdtls",
-        ft = "java",
+        -- ft = "java",
         dependencies = {
-            "mfussenegger/nvim-jdtls",
-            "mfussenegger/nvim-dap", -- for the debugger
-            "rcarriga/nvim-dap-ui", -- recommended
-            "theHamsta/nvim-dap-virtual-text", -- recommended
+            -- "mfussenegger/nvim-jdtls",
+            -- "mfussenegger/nvim-dap", -- for the debugger
+            -- "rcarriga/nvim-dap-ui", -- recommended
+            -- "theHamsta/nvim-dap-virtual-text", -- recommended
             "nvim-neotest/neotest",
         },
     },
     {
         "nvim-neotest/neotest",
-        dependencies = {
-            "nvim-neotest/nvim-nio",
-            "nvim-lua/plenary.nvim",
-            "antoinemadec/FixCursorHold.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        },
+        -- dependencies = {
+        --     "nvim-neotest/nvim-nio",
+        --     "nvim-lua/plenary.nvim",
+        --     "antoinemadec/FixCursorHold.nvim",
+        --     "nvim-treesitter/nvim-treesitter",
+        -- },
+        opts = { adapters = { "neotest-jdtls" } },
         keys = {
             { "<leader>n", "", desc = "+test" },
             {
@@ -92,11 +93,4 @@ return {
             },
         }, -- disable default keybindings for now
     },
-    config = function()
-        require("neotest").setup({
-            adapters = {
-                require("neotest-jdtls"),
-            },
-        })
-    end,
 }
